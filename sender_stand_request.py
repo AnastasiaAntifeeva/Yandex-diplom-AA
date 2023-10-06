@@ -11,6 +11,6 @@ def post_new_order(order_body):
 
 # Выполнить запрос на получение заказа по треку заказа
 def get_order(order_track):
-    params = {"t": "order_track"}
-    return requests.get(configuration.URL_SERVICE + f'/v1/orders/track', params=params)
+    params = {"t": order_track}
+    return requests.get(configuration.URL_SERVICE + configuration.GET_ORDERS, params=params)
 
